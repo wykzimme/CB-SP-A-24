@@ -10,7 +10,7 @@ public class drive extends OpMode {
 
     DcMotor topleft, topright;
     DcMotor backleft, backright;
-
+    DcMotor leftliner, rightliner;
 
     @Override
     public void init() {
@@ -18,8 +18,8 @@ public class drive extends OpMode {
         backleft = hardwareMap.get(DcMotor.class, "backleft");
         topright = hardwareMap.get(DcMotor.class, "topright");
         backright = hardwareMap.get(DcMotor.class, "backright");
-
-
+        leftliner = hardwareMap.get(DcMotor.class, "leftliner");
+        rightliner = hardwareMap.get(DcMotor.class, "rightliner");
 
 
     }
@@ -30,6 +30,8 @@ public class drive extends OpMode {
         backleft.setPower(gamepad1.right_stick_y + -gamepad1.left_stick_x * 1.1 + -gamepad1.right_stick_x);
         topright.setPower(-gamepad1.right_stick_y + gamepad1.left_stick_x * 1.1 + -gamepad1.right_stick_x);
         backright.setPower(gamepad1.right_stick_y + gamepad1.left_stick_x * 1.1 + gamepad1.right_stick_x);
+        leftliner.setPower(gamepad2.right_stick_y);
+        rightliner.setPower(gamepad2.right_stick_y);
 
     }
 }
