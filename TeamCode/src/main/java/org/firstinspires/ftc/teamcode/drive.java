@@ -26,10 +26,10 @@ public class drive extends OpMode {
 
     @Override
     public void loop() {
-        topleft.setPower(-gamepad1.right_stick_y + gamepad1.left_stick_x * 1.1 + gamepad1.right_stick_x);
-        backleft.setPower(gamepad1.right_stick_y + -gamepad1.left_stick_x * 1.1 + -gamepad1.left_stick_x);
-        topright.setPower(-gamepad1.right_stick_y + gamepad1.left_stick_x * 1.1 + -gamepad1.left_stick_x);
-        backright.setPower(gamepad1.right_stick_y + -gamepad1.left_stick_x * 1.1 + gamepad1.left_stick_x);
+        topleft.setPower(-gamepad1.right_stick_y + -gamepad1.left_stick_x * 1.1 + gamepad1.right_stick_x);
+        backleft.setPower(gamepad1.right_stick_y + -gamepad1.left_stick_x * 1.1 + -gamepad1.right_stick_x);
+        topright.setPower(-gamepad1.right_stick_y + gamepad1.left_stick_x * 1.1 + -gamepad1.right_stick_x);
+        backright.setPower(gamepad1.right_stick_y + gamepad1.left_stick_x * 1.1 + gamepad1.right_stick_x);
 
     }
 }
